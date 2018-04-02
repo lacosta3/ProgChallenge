@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="GroceryChallenge.Site2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" /> 
+    <title><%: Page.Title %>Grocery Challenge Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/MyStyleSheet.css"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script lang="javascript" type="text/javascript">
+
+</script>
+ 
+</head>
+<body >
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <div id="page-wrapper">
+                <div id="header-wrapper">
+                    <div id="float-left">
+                        <p class="site-title">
+                            <a id="A2" runat="server" href="/GroceryChallenge.aspx">Grocery Challenge Dashboard</a>
+                        </p>
+                    </div>
+                </div>
+                <div id="content-wrapper">
+                     <div class="float-left">
+                        <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+                     </div>
+               </div>
+               <div id="pagebottom-wrapper" style="width: 100%; ">
+                    <div id="pagebottom"style="display: table-row;width: 95%">
+                        <div style="width: 200px; display: table-cell;">
+                            <p class="bottom-title">&copy; <%: DateTime.Now.Year %> - HEB
+                                <asp:Label ID="lblUserName" runat="server" Text=""></asp:Label>
+                            </p>
+                        </div>
+                        <div style="display: table-cell;width:85%;"> 
+                           <p class="bottom-title-status"> 
+                                <asp:Label ID="lblError" runat="server" Width="100%" ForeColor="Red" Font-Size="9pt" Visible="false"></asp:Label>
+                           </p>
+                        </div>
+
+                    </div>
+               </div>
+        </div>
+    </form>
+</body>
+</html>
+
